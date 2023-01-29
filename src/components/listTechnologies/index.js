@@ -91,15 +91,19 @@ export const ListTechnologies = ({ technologies, setTechnologies }) => {
 
   return (
     <StyledUl ref={animationParent}>
-      {technologies.map((technology, index) => (
-        <Technologies
-          technology={technology}
-          key={index}
-          changeComponent={changeComponent}
-          deleteComponent={deleteComponent}
-          list={technologies}
-        />
-      ))}
+      {technologies.length > 0 ? (
+        technologies?.map((technology, index) => (
+          <Technologies
+            technology={technology}
+            key={index}
+            changeComponent={changeComponent}
+            deleteComponent={deleteComponent}
+            list={technologies}
+          />
+        ))
+      ) : (
+        <StyledLi>Nenhum item adicionado :(</StyledLi>
+      )}
       <StyledLi>
         <FormStyled onSubmit={(e) => e.preventDefault()}>
           <input
