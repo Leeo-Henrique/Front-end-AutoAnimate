@@ -21,7 +21,6 @@ function App() {
     );
   }, [technologies]);
 
-  // console.log(technologies);
   return (
     <main className="App">
       <ListTechnologies

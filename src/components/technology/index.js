@@ -3,8 +3,6 @@ import { MdClose } from "react-icons/md";
 
 import { StyledLi } from "./styles";
 
-import API from "../../api";
-
 export const Technologies = ({
   technology,
   deleteComponent,
